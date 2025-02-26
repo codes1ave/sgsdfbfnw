@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+    text-align: center;
+}
+h4{
+    text-align: center;
+}
+
+
+/* 드롭다운 메뉴 시작 */
+.top-bar__menu-box-1 > ul ul {
+  display: none;
+}
+
+.top-bar__menu-box-1 > ul > li {
+  display: inline-block;
+}
+
+.top-bar__menu-box-1 {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.top-bar__menu-box-1 ul {
+  background-color: black;
+  color: white;
+}
+
+.top-bar__menu-box-1 ul > li > a {
+  display: block;
+  font-size: 3rem;
+  padding: 10px 50px;
+}
+
+.top-bar__menu-box-1 ul > li:hover > a {
+  background-color: #555;
+}
+
+.top-bar__menu-box-1 > ul > li {
+  position: relative;
+}
+
+.top-bar__menu-box-1 > ul > li > ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+
+.top-bar__menu-box-1 > ul > li:hover > ul {
+  display: block;
+}
+
+.top-bar__menu-box-1 > ul {
+  border-radius: 20px;
+}
+body {
+    background-color: white;
+}
+body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+/*기본 핸드폰 화면*/
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+/*핸드폰 세로 화면*/
+        @media screen and (max-width: 768px) {
+            .container {
+                background-color: lightblue;
+            }
+        }
+/*테블릿 or 가로 핸드폰 화면*/
+        @media screen and (max-width: 480px) {
+            .container {
+                background-color: white;
+            }
+        }
+    </style>
+    <script>
+        function adjustSize() {
+            let screenWidth = window.innerWidth;
+            let screenHeight = window.innerHeight;
+            let container = document.querySelector('.container');
+
+            container.style.width = screenWidth + "px";
+            container.style.height = screenHeight + "px";
+        }
+
+        window.addEventListener("resize", adjustSize);
+        window.addEventListener("load", adjustSize);
+    </script>
+</head>
+<body>
+    <div class="con">
+        <nav class="top-bar__menu-box-1">
+          <ul>
+            <li>
+              <a href="#" style="text-decoration: none;"><strong>Story Menu</strong></a>
+              <ul>
+                <li><a href="#">text1</a></li>
+                <li><a href="#">text2</a></li>
+                <li><a href="#">text3</a></li>
+              </ul>
+            </li>
+        </div>
+        <h1>ddddddddddd</h1>
+</body>
+</html>
